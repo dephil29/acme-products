@@ -7,16 +7,15 @@ include_once '../config/core.php';
 include_once '../config/database.php';
 
 // product object
-include_once '../objects/product.php';
+include_once '../objects/category.php';
 
 // class instance
 $database = new Database();
 $db = $database->getConnection();
-$product = new Product($db);
+$category = new Category($db);
 
-// read one product
-$product->id=$_POST['prod_id'];
-$results=$product->readOne();
+// read all products
+$results = $category->readAll();
 
 // output in json format
 echo $results;
