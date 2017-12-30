@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 // If the form was submitted
 if($_POST){
     // include core configuration
@@ -20,7 +21,6 @@ if($_POST){
     $product->description = $_POST['description'];
     $product->category_id = $_POST['category_id'];
     $product->id = $_POST['id'];
-
     // Create the product
     echo $product->update() ? 'true' : 'false';
 }

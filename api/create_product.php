@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 // If the form was submitted
 if($_POST){
     // include core configuration

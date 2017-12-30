@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin: *");
 // include core configuration
 include_once '../config/core.php';
 
